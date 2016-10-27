@@ -1,5 +1,5 @@
 'Use removeSpecial(A1) to remove special characters in cell A1
-'To add or remove special characters from the list modify line 7 sSpecialChars
+'To add or remove special characters from the list modify line 7 sSpecialChars (space is included by default)
 
 Function removeSpecial(sInput As String) As String
     Dim sSpecialChars As String
