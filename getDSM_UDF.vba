@@ -1,11 +1,15 @@
 'User Defined Function that takes in a 5 digit zip code as the first argument and a 2 letter state abbreviation
 'as the second argument and returns the name of a person who covers that territory.
 'NOTES:
-'-Zip codes must be 5 digits
 '-State abbreviation cannot contain periods (Add function to remove special chars)
-'-State abbreviation must be all caps (Function to make string all caps, or convert arguments to all caps)
+'-State abbreviation must be all caps (use =UPPER(A1) to convert a string to all caps. Don't add this to getDSM() because the function can take very long to process)
+'-Once you have correctly parsed the data it's recommended that you copy the column and paste it over it's self as text otherwise the spreadsheet will be very slow
 
 Function getDSM(zipCode As String, state As String) As String
+    
+    'If you have many rows of data use the 2 below functions to parse the zip codes and states BEFORE running getDSM().  They will make the function run slower
+    'zipCode = Left(zipCode, 5)
+    'state = Upper(state)
     
     'Northeast
     Dim neUser1 As String
