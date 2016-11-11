@@ -29,7 +29,7 @@ Sub createCSV()
         fileName = username & " " & campaign & " " & todaysDate
         
         Dim dirPath As String
-        dirPath = "G:\Angelo Bovino\Sugar Uploads\Marketing Task Uploads\"
+            dirPath = "[file path here]"
         
         Sheets("BOILERPLATE").Select
         Sheets("BOILERPLATE").Copy
